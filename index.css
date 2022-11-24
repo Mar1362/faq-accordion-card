@@ -1,0 +1,187 @@
+:root{
+    --color-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --color-soft-red: hsl(14, 88%, 65%);
+    --color-soft-violet: hsl(273, 75%, 66%);
+    --color-soft-blue: hsl(240, 73%, 65%);
+    --color-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --color-dark-grayish-blue: hsl(240, 6%, 50%);
+    --color-light-grayish-blue: hsl(240, 5%, 91%);
+    --font-family: 'Kumbh Sans', auto;
+    font-size: 12px;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom, var(--color-soft-violet), var(--color-soft-blue));
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.card-mobile{
+    background-color: white;
+    width: 326px;
+    border-radius: 20px;
+    padding: 0 20px 30px 20px;
+    margin-top: 40%;
+    background: url(images/bg-pattern-mobile.svg) no-repeat 50% 0, white;
+    position: relative;
+}
+.card-mobile::before{
+    content: "";
+    width: 71%;
+    height: 50%;
+    position: absolute;
+    z-index: 1;
+    top: -105px;
+    left: 15%;
+    background: url(images/illustration-woman-online-mobile.svg) no-repeat;
+}
+.title{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 2.7rem;
+    text-align: center;
+}
+.subtitle-first-level{
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--color-very-dark-desaturated-blue);
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    position: relative;
+}
+.selected-subtitle{
+    color: black;
+    font-weight: 700;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.subtitle-first-level:hover:not(.selected-subtitle){
+    color: var(--color-soft-red) ;
+    cursor: pointer;
+}
+
+.big-mg-top{
+    margin-top: 130px;
+}
+.no-list-style{
+    list-style: none;
+}
+.medium-mg-top{
+    margin-top: 25px;
+}
+.low-mg-top{
+    margin-top: 10px;
+}
+.paragraph{
+    color: var(--color-dark-grayish-blue);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.bottom-line-style{
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-light-grayish-blue);
+}
+.arrow-down::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 2%;
+    top: 25%;
+    z-index: 1;
+    background: url(images/icon-arrow-down.svg) no-repeat;
+}
+.arrow-up::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 2%;
+    top: 10%;
+    z-index: 1;
+    background: url(images/icon-arrow-down.svg) no-repeat;
+    transform: rotate(180deg);
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+@media only screen and (min-width: 950px){
+    
+    /*resetting*/
+    .card-mobile::before{
+        content: "";
+        width: unset;
+        height: unset;
+        position: static;
+        z-index: 0;
+        background: unset;
+    }
+    /* new styles */
+    .card-mobile{
+        margin: unset;
+        width: 920px;
+        height: 510px;
+        background: url(images/illustration-woman-online-desktop.svg) no-repeat left -19% top 45%,
+                    url(images/bg-pattern-desktop.svg) no-repeat top 68% left 1250%,
+                    white;
+        padding-left: 51.5%;
+        position: relative;
+
+    }
+    .card-mobile::before{
+        content: "";
+        position: absolute;
+        background: url(images/illustration-box-desktop.svg) no-repeat;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        top: 200px;
+        left: -90px;
+    }
+    .title{
+        text-align: left;
+        font-size: 3rem;
+    }
+    .subtitle-first-level{
+        width: 340px;
+    }
+    li{
+        width: 350px;
+    }
+    .big-mg-top{
+        margin-top: 60px;
+    }
+    .medium-mg-top{
+        margin-top: 35px;
+    }
+    .low-mg-top{
+        margin-top: 15px;
+    }
+    .bottom-line-style{
+        border-bottom-width: 1px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
